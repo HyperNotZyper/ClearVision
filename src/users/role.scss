@@ -37,9 +37,7 @@
   left: calc(100% - 7px);
 }
 %roleCircle {  
-  %userPopoutRoles &,
-  %guildSettingsMembersRoleWrapper &,
-  %forumSetupRoleList & {
+  %role & {
     width: 0 !important;
     height: 0 !important;
     &:not(:empty) {
@@ -75,7 +73,7 @@
   }
 }
 /*assign roles popout*/
-.container_d27846 {
+%roleAssignPopout {
   background-color: hsla(0, 0%, 0%, 0.8);
   border: none;
 }

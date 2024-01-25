@@ -35,6 +35,7 @@
 // BE THE FIRST TO START A CONVERSATION
 %forumFirstIcon {
   background: $main-color;
+  color: #fff;
 }
 
 // GET STARTED
@@ -132,7 +133,24 @@
   text-align: center;
   padding: 0 10px;
 }
-
+// typing animation & message count
+/*icon*/
+%forumMessageCountIcon > svg {
+  color: var(--channel-color);
+}
+/*post unread, message count, old*/
+/*important needed for inline*/
+%forumNewMessageCountText {
+color: $main-color !important;
+}
+/* the !important is technically not needed but saves a rule
+ in %forumListContainer%forumListOpen %Dots, 
+ which creates an overriding inline rule*/
+%forumGalleryTypingDots, /*old forums*/
+%forumListTypingDots { /*new forums*/
+  background-color: rgba(0,0,0,.6);
+  border: 2px solid $main-color !important; 
+}
 
 // tag box etc
 %forumTagBox {
@@ -146,6 +164,9 @@
       color: $hover-color;
     }
   }
+}
+%forumTagSelectedCount {
+  background: $main-color;
 }
 %forumSortDropdownButton {
   background-color: $main-color;
@@ -201,6 +222,9 @@
 %forumChatStartBox {
   background-color: transparent;
 }
+%forumChatStartBox:after {
+  border-color: transparent;
+}
 %forumMessageButton {
   background-color: hsla(0, 0%, 100%, 0.05);
   border-radius: 3px;
@@ -225,6 +249,10 @@
     border-radius: 0 0 8px 8px;
   }
 }
+%forumSettingsGuidelinesAddTags {
+  background: $main-color;
+}
+
 
 // EMPTY FORUM
 %forumEmpty {
